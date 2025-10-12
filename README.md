@@ -1,4 +1,4 @@
-# Publishing a Java Utility Package to GitHub Packages
+# Numsy - My Own Java Package
 
 ## Table of Contents
 * What is Numsy?
