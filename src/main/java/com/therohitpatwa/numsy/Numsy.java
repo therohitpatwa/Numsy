@@ -6,12 +6,18 @@ import java.util.List;
 import java.util.Locale;
 
 public class Numsy {
+
+
+
     public static boolean isEven(int n) {
         return n%2==0;
     }
+
+
     public static boolean isOdd(int n) {
         return n%2!=0;
     }
+
     public static boolean isPrime(int n) {
         if(n<=1) return false;
         for(int i=2;i*i<=n;i++)
@@ -21,9 +27,12 @@ public class Numsy {
         }
         return true;
     }
+
+
+
     public static List<Integer>  primeInRange(int start,int end)
     {
-        List<Integer> primes=new ArrayList<>();
+        List<Integer> primes=new ArrayList();
         for(int i=Math.max(2,start);i<=end;i++)
         {
             if(isPrime(i))
@@ -33,6 +42,9 @@ public class Numsy {
         }
         return primes;
     }
+
+
+
 
     public static long factorial(int n)
     {
@@ -46,10 +58,16 @@ public class Numsy {
         }
         return fact;
     }
+
+
+
     public static String formatWithCommas(long n)
     {
         return NumberFormat.getNumberInstance(Locale.US).format((n));
     }
+
+
+
     public static int gcd(int a, int b) {
         while (b != 0) {
             int t = b;
@@ -58,8 +76,22 @@ public class Numsy {
         }
         return Math.abs(a);
     }
+
+
+    
     public static int lcm(int a, int b) {
         return Math.abs(a * b)/gcd(a,b);
+    }
+
+
+    public static int noOfDigits(int n)
+    {
+        int cnt=0;
+        while(n > 0){
+            cnt++;
+            n /= 10;
+        }
+        return cnt;
     }
 
 }
